@@ -1,0 +1,5 @@
+{
+  "display_name": "ten-step-learning",
+  "display_name_en": "ten-step-learning",
+  "description_en": "Use when the user wants to systematically learn, research or unpack an unfamiliar topic. Turns a topic into a ten-step verifiable evidence chain: fact-check, expert panel, contradiction adjudication, credibility scoring, resource roadmap, five-level ladder, 20-hour sprint, quiz, Feynman explanation, cheat sheet — delivered as a mobile-readable, printable single-file handbook. Supports single-step invocation and graceful degradation. Triggers: 'ten-step learn X', 'ten-step research X', 'ten-step deconstruct X'. Not for single-concept lookups or procedure queries. Skill id: ten-step-learning."
+}

@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Index Fund Investing · Ten-Step Handbook (sample excerpt)</title>
+<style>
+  :root{
+    --ink:#1F2328; --ink2:#49525B; --ink3:#6E7781;
+    --line:#E4E7EB; --soft:#F7F8FA;
+    --navy:#12365F; --blue:#1A4D8F; --blue-soft:#EDF3FA;
+    --amber:#92600A; --amber-soft:#FCF4E4;
+    --green:#15693B; --green-soft:#EBF6EF;
+    --red:#A32020; --red-soft:#FBECEC;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:#fff;color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Arial,sans-serif;
+    font-size:15px;line-height:1.8;-webkit-font-smoothing:antialiased}
+  .page{max-width:860px;margin:0 auto;padding:0 20px 70px}
+
+  .cover{background:linear-gradient(155deg,#0E2C4D 0%,#1A4D8F 100%);color:#fff;
+    margin:0 -20px 34px;padding:46px 26px 38px}
+  .cover .in{max-width:860px;margin:0 auto}
+  .badge{display:inline-block;font-size:11.5px;letter-spacing:.12em;
+    background:rgba(255,255,255,.16);padding:4px 12px;border-radius:20px;margin-bottom:16px}
+  .cover h1{font-size:27px;margin:0 0 10px;font-weight:700;line-height:1.32}
+  .cover .sub{font-size:14px;opacity:.8;margin:0}
+  .cover .note{margin-top:18px;font-size:12.5px;opacity:.66;line-height:1.7}
+
+  .disclaimer{background:var(--amber-soft);border-left:4px solid var(--amber);
+    padding:14px 16px;border-radius:6px;font-size:13px;color:#4A3A16;margin-bottom:30px}
+
+  nav.toc{background:var(--soft);border:1px solid var(--line);border-radius:8px;
+    padding:18px 20px;margin-bottom:36px;font-size:13.5px}
+  nav.toc b{display:block;margin-bottom:8px;font-size:12.5px;letter-spacing:.1em;color:var(--ink3)}
+  nav.toc a{color:var(--blue);text-decoration:none;margin-right:16px;white-space:nowrap;line-height:2}
+
+  section{margin-bottom:40px}
+  h2{font-size:19px;margin:0 0 6px;padding-bottom:10px;border-bottom:2px solid var(--line);
+    display:flex;align-items:baseline;gap:10px}
+  h2 .n{background:var(--navy);color:#fff;font-size:12px;font-weight:600;
+    padding:3px 9px;border-radius:5px;flex:none}
+  .lead{color:var(--ink2);font-size:14px;margin:10px 0 16px}
+  h3{font-size:15px;margin:24px 0 10px;color:var(--blue)}
+  p{margin:10px 0}
+
+  table{width:100%;border-collapse:collapse;margin:14px 0;font-size:13.5px}
+  th{background:var(--soft);text-align:left;padding:9px 11px;border:1px solid var(--line);
+    font-weight:600;color:var(--ink2);font-size:13px}
+  td{padding:9px 11px;border:1px solid var(--line);vertical-align:top}
+  tbody tr:nth-child(even){background:#FCFCFD}
+
+  .cards{display:grid;gap:12px;margin:14px 0}
+  .card{border:1px solid var(--line);border-radius:8px;padding:14px 16px;background:#fff}
+  .card .who{font-weight:700;font-size:14px;margin-bottom:4px}
+  .card .who span{font-weight:400;color:var(--ink3);font-size:12.5px;margin-left:8px}
+  .card .li{font-size:13.5px;color:var(--ink2);margin:7px 0}
+  .card .hide{margin-top:9px;padding-top:9px;border-top:1px dashed var(--line);
+    font-size:13px;color:var(--amber)}
+  .card .hide b{font-weight:600}
+
+  .bar{height:6px;background:#EDEFF2;border-radius:4px;overflow:hidden;margin-top:6px}
+  .bar i{display:block;height:100%;background:var(--blue)}
+
+  .hl{background:var(--blue-soft);border-left:4px solid var(--blue);
+    padding:13px 16px;border-radius:6px;margin:14px 0;font-size:13.5px}
+  .hl b{color:var(--blue)}
+
+  .warnbox{background:var(--red-soft);border-left:4px solid var(--red);
+    padding:13px 16px;border-radius:6px;margin:14px 0;font-size:13.5px}
+  .warnbox b{color:var(--red)}
+
+  .good{background:var(--green-soft);border-left:4px solid var(--green);
+    padding:13px 16px;border-radius:6px;margin:14px 0;font-size:13.5px}
+  .good b{color:var(--green)}
+
+  ol.q{padding-left:20px}
+  ol.q>li{margin:14px 0;font-size:14px}
+  ol.q .opt{margin:6px 0 0;padding-left:6px;font-size:13.5px;color:var(--ink2)}
+  ol.q .ans{background:var(--green-soft);border-radius:5px;padding:8px 11px;
+    margin-top:8px;font-size:13px;color:#155E35}
+
+  .step-tag{display:inline-block;font-size:11.5px;background:var(--soft);
+    border:1px solid var(--line);color:var(--ink3);
+    padding:1px 8px;border-radius:4px;margin-left:8px;vertical-align:2px}
+
+  footer{margin-top:50px;padding-top:18px;border-top:1px solid var(--line);
+    font-size:12.5px;color:var(--ink3)}
+
+  @media (max-width:600px){
+    body{font-size:14.5px}
+    .cover{margin:0 -20px 26px;padding:34px 18px 30px}
+    .cover h1{font-size:21px}
+    h2{font-size:17px}
+    table{font-size:12.5px}
+    th,td{padding:7px 8px}
+    .page{padding:0 14px 50px}
+  }
+  @media print{
+    body{font-size:11.5px;line-height:1.7}
+    .cover{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    h2{page-break-after:avoid}
+    table,.card,.hl,.warnbox,.good{page-break-inside:avoid}
+    nav.toc{display:none}
+  }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <div class="in">
+    <div class="badge">ten-step-learning · sample excerpt</div>
+    <h1>Index Fund Investing · Ten-Step Handbook</h1>
+    <p class="sub">An overused topic, taken apart again with five-perspective collision and evidence grading</p>
+    <p class="note">This file was actually generated by the ten-step-learning skill; it is an excerpt of the full handbook (about 30 pages).<br>
+    Numbers in the sample are structural facts or illustrative values; in a real run, step 0 verifies online and records source and date.</p>
+  </div>
+</div>
+
+<div class="page">
+
+<div class="disclaimer">
+  <b>Disclaimer</b>: this document is a learning-method demonstration, not investment advice. Any specific decision should follow official rules, fund contract terms and licensed professionals.
+</div>
+
+<nav class="toc">
+  <b>Contents</b>
+  <a href="#s1">1 Five-perspective panel</a><a href="#s2">2 Contradiction list</a><a href="#s3">3 60-second briefing</a>
+  <a href="#s4">4 Credibility scoring</a><a href="#s5">5 Resources and roadmap</a><a href="#s6">6 Five-level ladder</a>
+  <a href="#s7">7 20-hour sprint</a><a href="#s8">8 Quiz</a><a href="#s9">9 Feynman explanation</a><a href="#s10">10 Cheat sheet</a>
+</nav>
+
+<!-- ============ Step 0 ============ -->
+<section>
+  <h2><span class="n">0</span>Fact check and scope</h2>
+  <p class="lead">Draw the scope before acting, and confirm which "current facts" must be verified online — writing such content from memory inevitably goes wrong.</p>
+  <table>
+    <thead><tr><th style="width:24%">Item</th><th>This run's setting</th></tr></thead>
+    <tbody>
+      <tr><td>Topic scope</td><td>Broad-based index fund investing for individual investors in mainland China; excludes sector/theme funds and leveraged products</td></tr>
+      <tr><td>Geographic scope</td><td>Domestic public funds, both off-exchange subscriptions and on-exchange ETFs</td></tr>
+      <tr><td>Must-verify items</td><td>Fee structure, subscription/redemption rules, index methodology, tax policy — each checked against official disclosures; verification record below</td></tr>
+      <tr><td>Deliberately excluded</td><td>Specific return forecasts, market-timing signals, any form of "guaranteed profit" statement</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Verification record</h3>
+  <p class="lead">Every "current fact" item must leave a reviewable three-column record. The following is filled in for demonstration, showing the completeness a real run requires; in a real run the date is the actual retrieval day.</p>
+  <table>
+    <thead><tr><th style="width:44%">Conclusion</th><th style="width:34%">Source</th><th>Verified on</th></tr></thead>
+    <tbody>
+      <tr><td>Passive index funds structurally charge lower management fees than active equity funds (typically 0.15%–0.50% vs 1.0%–1.5%)</td><td>Side-by-side comparison of the "fees and taxes" chapter of fund contracts (example: 3 broad-based ETF feeder fund contracts)</td><td>2026-10-30</td></tr>
+      <tr><td>Redemption within 7 days carries a 1.5% fee, fully returned to fund assets (a punitive fee)</td><td>Standard fund contract terms + CSRC rules on open-end fund sales fees</td><td>2026-10-30</td></tr>
+      <tr><td>Off-exchange fund subscription fees have discount channels; the exact discount follows the sales platform's disclosure</td><td>Third-party sales platform fee disclosure page (verified for the example)</td><td>2026-10-30</td></tr>
+      <tr><td>The weighting method and rebalancing frequency of mainstream broad-based indices (CSI 300 / CSI 500 etc.) follow the index provider's official methodology</td><td>China Securities Index Co. website · index methodology documents</td><td>2026-10-30</td></tr>
+      <tr><td>The dividend option (cash dividend / dividend reinvestment) defaults to the fund contract and prospectus and can be changed by the investor</td><td>The "fund returns and distribution" chapter of the fund contract</td><td>2026-10-30</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ============ Step 1 ============ -->
+<section id="s1">
+  <h2><span class="n">1</span>Five-perspective panel</h2>
+  <p class="lead">Five kinds of people look at the same thing and often reach opposite conclusions. Each must give a position, three pieces of evidence, and the sentence "they know but usually do not say".</p>
+
+  <div class="cards">
+    <div class="card">
+      <div class="who">Simulated practitioner<span>Ten years on the front line, has managed client accounts</span></div>
+      <div class="li">Position: dollar-cost averaging works, but nine out of ten people fail at "stopping when it falls". Behavior discipline, not product selection, decides the outcome.</div>
+      <div class="li">Evidence: ① client redemption peaks almost always land near index lows; ② very few people manage to keep investing through three full cycles; ③ among loss complaints, most are not wrong purchases but stopping midway and chasing back at highs.</div>
+      <div class="hide"><b>Hidden insight:</b> the industry knows perfectly well that DCA's "effect" comes largely from replacing a timing decision with a discipline decision — not from DCA itself raising returns.</div>
+    </div>
+
+    <div class="card">
+      <div class="who">Researcher<span>Asset pricing and portfolio theory</span></div>
+      <div class="li">Position: DCA does not change expected return; it only changes the path by which the return is realized.</div>
+      <div class="li">Evidence: ① the expected value of buying in installments equals that of a lump sum; the difference is variance, not mean; ② DCA reduces the single-point risk of "buying at a high", at the cost of opportunity cost in a bull market; ③ the improvement from DCA correlates positively with the asset's volatility — the more volatile, the more the path differs.</div>
+      <div class="hide"><b>Hidden insight:</b> for a broad-based index that rises over the long run, a lump sum is statistically better — but it requires tolerating huge short-term drawdowns, which almost nobody can do. So "better" does not mean "executable".</div>
+    </div>
+
+    <div class="card">
+      <div class="who">Skeptic<span>Specializes in dismantling sales rhetoric</span></div>
+      <div class="li">Position: DCA has been packaged as "risk-free arbitrage", which is the biggest misdirection.</div>
+      <div class="li">Evidence: ① marketing materials love the "smile curve", but that curve is drawn after the fact; ② DCA cannot avoid a long-term deterioration in the underlying asset's fundamentals; ③ "buy more as it falls" in a single market's long decline is simply adding to losses.</div>
+      <div class="hide"><b>Hidden insight:</b> many DCA promotions deliberately start just before a decline, which makes the backtest curve look best. Change the start point and the conclusion changes.</div>
+    </div>
+
+    <div class="card">
+      <div class="who">Economist<span>Institutions and efficiency</span></div>
+      <div class="li">Position: the value of index investing comes mainly from cost, not stock-picking skill.</div>
+      <div class="li">Evidence: ① passive products structurally charge lower management fees than active ones; ② the share of active funds beating their benchmark after fees is persistently low; ③ the lower the trading frequency, the smaller the friction cost — a certain saving.</div>
+      <div class="hide"><b>Hidden insight:</b> "the market is broadly efficient" and "you should buy index funds" are two propositions. The former does not imply the latter is optimal for you — it only says "beating the market average is hard", not "you can tolerate the market average's volatility".</div>
+    </div>
+
+    <div class="card">
+      <div class="who">Historian<span>Long-cycle view</span></div>
+      <div class="li">Position: every generation believes its own market is the exception.</div>
+      <div class="li">Evidence: ① several markets have had flat periods lasting more than a decade; ② "this time is different" is the common language at every bubble top; ③ DCA's historical performance varies enormously across markets, depending on the market's long-term direction.</div>
+      <div class="hide"><b>Hidden insight:</b> every historical conclusion about DCA depends heavily on the chosen market and window. The same method, in another country or from another start point, can produce the opposite conclusion.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Step 2 ============ -->
+<section id="s2">
+  <h2><span class="n">2</span>Contradiction list</h2>
+  <p class="lead">Lay out the disagreements above and adjudicate each one — adjudication must state conditions; no splitting the difference.</p>
+
+  <h3>A · Viewpoint conflicts and adjudication</h3>
+  <table>
+    <thead><tr><th style="width:24%">Conflict</th><th style="width:22%">Pro side</th><th style="width:22%">Con side</th><th>Adjudication</th></tr></thead>
+    <tbody>
+      <tr>
+        <td>DCA vs lump sum</td>
+        <td>DCA reduces timing risk and suits most people</td>
+        <td>A lump sum has a higher expected return</td>
+        <td><b>Conditional adjudication</b>: if the money is already available and you can tolerate a 30%+ drawdown, a lump sum is statistically better; if the money comes from future income (salary), DCA is the only feasible form — there is no "lump sum" option, so the debate itself does not apply.</td>
+      </tr>
+      <tr>
+        <td>Buy more as it falls</td>
+        <td>Lowers the average cost, wait for the rebound</td>
+        <td>You may keep adding to a market in long-term decline</td>
+        <td><b>Conditional adjudication</b>: it holds only if the economy the asset represents grows over the long run and does not disappear. High probability for broad-based indices; not for a single sector or theme.</td>
+      </tr>
+      <tr>
+        <td>Can DCA raise returns?</td>
+        <td>Yes, the smile curve proves it</td>
+        <td>No, it only changes the path</td>
+        <td><b>The con side is closer to correct</b>: mathematically it does not change the expected value. Cases claiming "higher returns" are path differences caused by start-point selection and cannot be a general conclusion.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>B · Evidence strength grading</h3>
+  <table>
+    <thead><tr><th style="width:18%">Grade</th><th style="width:40%">Corresponding content in this topic</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr><td>Very strong</td><td>The expected value of installment buying equals that of a lump sum</td><td>Follows directly from the linearity of expectation — a mathematical identity</td></tr>
+      <tr><td>Strong</td><td>Passive products structurally charge lower fees than active ones</td><td>Fees are publicly disclosed contract terms, not estimates</td></tr>
+      <tr><td>Weak</td><td>Backtest conclusions like "DCA doubles your money in ten years"</td><td>Highly dependent on the chosen start and end; fails when the window changes; not a basis for decisions</td></tr>
+    </tbody>
+  </table>
+
+  <h3>C · Points of consensus (no side objects)</h3>
+  <ol>
+    <li>Cost (fees and friction) certainly eats into returns — the lower, the better.</li>
+    <li>DCA's value lies mainly in behavioral constraint, not return enhancement.</li>
+    <li>If the underlying asset is wrong, no entry method can save it.</li>
+    <li>"Buy more as it falls" must set a survival premise for the asset; otherwise it is dangerous.</li>
+    <li>Backtest conclusions mean nothing outside their specific window.</li>
+  </ol>
+
+  <h3>D · Industry blind spots (almost nobody raises them)</h3>
+  <ol>
+    <li><b>The stop-investing rate is the real decider.</b> Every discussion compares strategies, yet few count "how many people actually invest through the full cycle".</li>
+    <li><b>DCA's psychological cost is systematically underestimated.</b> Keeping deductions going through two years of floating losses squeezes ordinary household cash flow and mood — rarely quantified into "strategy quality".</li>
+    <li><b>Exit rules are almost always missing.</b> Buying rules are debated endlessly; selling rules get one sentence: "hold long term".</li>
+    <li><b>The cost difference between on-exchange and off-exchange paths is ignored.</b> For the same asset, fees and operational friction differ, and many people have never done the math.</li>
+  </ol>
+</section>
+
+<!-- ============ Step 3 ============ -->
+<section id="s3">
+  <h2><span class="n">3</span>60-second briefing</h2>
+  <p class="lead">A paragraph you can read aloud, no jargon.</p>
+
+  <div class="hl">
+    <b>Script</b><br>
+    Many people think DCA is a technique that raises returns. It is not. If you put a sum of money in over twelve months, or all at once on day one, the mathematically expected outcome is the same — the difference is the volatility path in between. The benefit of buying in installments is that you will not happen to buy on the unluckiest day; the cost is that if the market rises all the way, you earn a little less.<br><br>
+    So why is DCA still useful? Because it turns "when to buy" — a question you cannot guess — into "a fixed deduction every month" — an action you can perform. Many people lose money not because they bought the wrong thing, but because they stopped when the pain was worst, then chased back in after the rebound. That is what DCA actually governs.<br><br>
+    So it has three premises: first, what you buy must exist for the long run — broad-based indices qualify, a single sector may not; second, you must actually finish investing — stopping midway means the design never existed; third, you must decide in advance when to sell — almost nobody does this step, and it ends as "cannot bear to sell when up, dare not sell when down".
+  </div>
+
+  <h3>5 key findings (in descending credibility)</h3>
+  <ol>
+    <li>DCA does not raise expected return; it only changes the volatility path — a mathematical conclusion, not an opinion.</li>
+    <li>Its real value is behavioral constraint: turning a timing problem into a discipline action.</li>
+    <li>Asset selection is a precondition; no entry method can compensate for a wrong asset.</li>
+    <li>"Buy more as it falls" holds only if the asset survives and rises long term; otherwise it accelerates losses.</li>
+    <li>The missing exit rule is the most common practical hole — far more important than the buying rule.</li>
+  </ol>
+
+  <h3>3 concrete actions</h3>
+  <table>
+    <thead><tr><th style="width:22%">When</th><th>What to do</th></tr></thead>
+    <tbody>
+      <tr><td>This week</td><td>Split the amount to invest into monthly installments, and confirm the money will not be needed for 24 months — otherwise do not start</td></tr>
+      <tr><td>This week</td><td>Write three iron rules and post them where you can see them: do not stop during floating losses, do not adjust the amount on short-term news, sell only when preset conditions are met</td></tr>
+      <tr><td>Next 90 days</td><td>Touch no sector/theme funds or leveraged products; do one thing only — get the deductions running and verify that you can persist</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ============ Step 4 ============ -->
+<section id="s4">
+  <h2><span class="n">4</span>Credibility scoring</h2>
+  <p class="lead">Score = evidence-type weight × freshness coefficient. Below 80 is marked "to verify", with the exact missing data named.</p>
+
+  <table>
+    <thead>
+      <tr><th style="width:6%">#</th><th style="width:30%">Finding</th><th style="width:10%">Score</th><th style="width:16%">Basis type</th><th style="width:12%">Status</th><th>What is missing</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td><td>DCA does not change expected return, only the path</td>
+        <td><b>95</b><div class="bar"><i style="width:95%"></i></div></td>
+        <td>Mathematical identity</td><td>Confirmed</td><td>Nothing needed</td>
+      </tr>
+      <tr>
+        <td>2</td><td>Passive products structurally charge lower fees than active ones</td>
+        <td><b>88</b><div class="bar"><i style="width:88%"></i></div></td>
+        <td>Contract disclosure</td><td>Confirmed</td><td>Exact numbers need checking against the current product contract</td>
+      </tr>
+      <tr>
+        <td>3</td><td>The stop-investing rate is the main determinant of actual outcomes</td>
+        <td><b>72</b><div class="bar"><i style="width:72%"></i></div></td>
+        <td>Single-sample observation</td><td>To verify</td><td>No public account-level retention statistics; only practitioner experience and local samples</td>
+      </tr>
+      <tr>
+        <td>4</td><td>DCA's path difference is more pronounced in more volatile assets</td>
+        <td><b>78</b><div class="bar"><i style="width:78%"></i></div></td>
+        <td>Theoretical derivation + partial empirical</td><td>To verify</td><td>No cross-market comparison with a unified methodology</td>
+      </tr>
+      <tr>
+        <td>5</td><td>Conclusions like "DCA doubles your money in ten years"</td>
+        <td><b>42</b><div class="bar"><i style="width:42%"></i></div></td>
+        <td>Window-selective backtest</td><td><b>Recommend abandoning</b></td><td>Fails as soon as the window changes — a pseudo-proposition not worth verifying</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="warnbox">
+    <b>Pseudo-proposition worth abandoning outright</b>: any claim of the form "keep investing for N years and you will definitely earn X%". The problem is not whether the number is accurate, but that the conclusion is highly window-sensitive — the same method with a different start point yields the opposite result, so it is not transferable.
+  </div>
+</section>
+
+<!-- ============ Step 5 ============ -->
+<section id="s5">
+  <h2><span class="n">5</span>Resource selection and one-week roadmap</h2>
+  <p class="lead">Write the selection criteria first, then list resources — otherwise it turns into padding.</p>
+
+  <div class="hl">
+    <b>Selection criteria</b>: authoritative rules ＞ verifiable ＞ available in your language ＞ practice-oriented. Deliberately excluded: ① "popular science" carrying product promotion; ② short videos that give conclusions without derivation; ③ return comparisons that do not disclose the backtest window.
+  </div>
+
+  <table>
+    <thead><tr><th style="width:6%">#</th><th style="width:26%">Resource type</th><th style="width:32%">Why this one</th><th>Search identifier</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>Systematic textbook (portfolio theory)</td><td>Explains the relationship between expectation, variance and diversification — the foundation for judging any "technique"</td><td>portfolio management / investments textbook chapter</td></tr>
+      <tr><td>2</td><td>Official rule source</td><td>Index methodology and fund contract terms — the only binding text</td><td>index provider methodology / fund contract</td></tr>
+      <tr><td>3</td><td>Practitioner book (index investing)</td><td>Explains engineering details such as cost and tracking error</td><td>index funds / passive investing book</td></tr>
+      <tr><td>4</td><td>Free structured course</td><td>Fastest way to build a framework; suits absolute beginners</td><td>open course · personal finance / introduction to investments</td></tr>
+      <tr><td>5</td><td>Hands-on tool</td><td>Calculating the fee impact over the long run yourself beats reading ten articles</td><td>compound interest and fee calculator</td></tr>
+    </tbody>
+  </table>
+
+  <h3>7-day roadmap (every day must produce something checkable)</h3>
+  <table>
+    <thead><tr><th style="width:10%">Day</th><th style="width:40%">Goal</th><th>Output</th></tr></thead>
+    <tbody>
+      <tr><td>Day 1</td><td>Understand expectation vs variance</td><td>A one-page handwritten derivation: why installments do not change the expectation</td></tr>
+      <tr><td>Day 2</td><td>Read one index methodology</td><td>Write down the index's selection rules and rebalancing frequency</td></tr>
+      <tr><td>Day 3</td><td>Calculate the fee impact</td><td>A table: the difference after 20 years under two fee levels</td></tr>
+      <tr><td>Day 4</td><td>Distinguish on-exchange vs off-exchange</td><td>A one-page comparison: operation, cost, settlement time</td></tr>
+      <tr><td>Day 5</td><td>Dissect a piece of marketing material</td><td>Mark every conclusion whose window is undisclosed</td></tr>
+      <tr><td>Day 6</td><td>Write your own exit rule</td><td>Three executable clauses, with triggers and exceptions</td></tr>
+      <tr><td>Day 7</td><td>Review the week</td><td>One page: three claims I abandoned + why</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ============ Step 6 ============ -->
+<section id="s6">
+  <h2><span class="n">6</span>Five-level learning ladder</h2>
+  <p class="lead">Each level needs self-testable criteria, common pitfalls, and one self-test question.</p>
+
+  <table>
+    <thead><tr><th style="width:16%">Level</th><th style="width:32%">Passing criteria (self-testable)</th><th style="width:28%">Pitfalls</th><th>Self-test</th></tr></thead>
+    <tbody>
+      <tr>
+        <td>Cognition</td>
+        <td>Can explain that DCA changes the path, not the expectation</td>
+        <td>Treating it as a return-enhancement tool</td>
+        <td>How does the expected value of installment buying compare with a lump sum?</td>
+      </tr>
+      <tr>
+        <td>Rules</td>
+        <td>Can independently read fee and subscription/redemption clauses in a fund contract</td>
+        <td>Looking only at the management fee on the marketing page, ignoring other costs</td>
+        <td>For the same asset, where do on-exchange and off-exchange costs differ?</td>
+      </tr>
+      <tr>
+        <td>Principles</td>
+        <td>Can use variance to explain why higher volatility makes the path difference more pronounced</td>
+        <td>Misreading "path difference" as "higher return"</td>
+        <td>Why does the DCA curve look "nicer" for highly volatile assets?</td>
+      </tr>
+      <tr>
+        <td>Strategy</td>
+        <td>Can write exit rules with triggers and exceptions</td>
+        <td>Having only buying rules, no selling rules</td>
+        <td>Under what circumstances would your exit condition fail?</td>
+      </tr>
+      <tr>
+        <td>Practice</td>
+        <td>Can invest through one full cycle without temporarily changing the rules</td>
+        <td>Stopping during floating losses, chasing back after the rebound</td>
+        <td>Last time you wanted to stop, what triggered it?</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="good">
+    <b>The most common level-skipping failure</b>: jumping from cognition straight to practice — starting deductions after understanding the idea, without any exit rule or stop-investing contingency. The result is not a failed strategy; it is a strategy that was never written completely.
+  </div>
+</section>
+
+<!-- ============ Step 7 ============ -->
+<section id="s7">
+  <h2><span class="n">7</span>20-hour sprint plan</h2>
+  <p class="lead">Eight modules, exactly 20 hours in total, each with a checkable output.</p>
+
+  <table>
+    <thead><tr><th style="width:6%">#</th><th style="width:26%">Topic</th><th style="width:10%">Duration</th><th style="width:28%">Core content</th><th>Check output</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>Expectation and variance</td><td>3h</td><td>The mathematics of installment buying</td><td>One-page derivation</td></tr>
+      <tr><td>2</td><td>Index methodology</td><td>2h</td><td>Selection, weighting, rebalancing</td><td>One-page rule summary</td></tr>
+      <tr><td>3</td><td>Fee structure</td><td>3h</td><td>Management, custody, subscription/redemption fees, tracking error</td><td>Fee comparison table</td></tr>
+      <tr><td>4</td><td>On-exchange vs off-exchange</td><td>2h</td><td>Operational paths and cost differences</td><td>Two-column comparison</td></tr>
+      <tr><td>5</td><td>Behavioral biases</td><td>3h</td><td>Loss aversion, disposition effect</td><td>Self-check list</td></tr>
+      <tr><td>6</td><td>Exit rules and rebalancing</td><td>3h</td><td>Designing triggers</td><td>Three executable clauses</td></tr>
+      <tr><td>7</td><td>Dissecting marketing material</td><td>2h</td><td>Spotting window selection and rhetoric</td><td>Dissection notes</td></tr>
+      <tr><td>8</td><td>Writing the full plan</td><td>2h</td><td>Buying, holding, selling</td><td>One-page complete plan</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Hands-on mini-projects</h3>
+  <table>
+    <thead><tr><th style="width:26%">Project</th><th style="width:34%">What you get</th><th>Why it works</th></tr></thead>
+    <tbody>
+      <tr><td>Fee compounding calculation</td><td>A 20-year difference table</td><td>Turns abstract cost into concrete numbers — far more impactful than reading articles</td></tr>
+      <tr><td>Dissect one marketing page</td><td>Every conclusion with an undisclosed window marked</td><td>Trains immunity to backtest rhetoric</td></tr>
+      <tr><td>Write exit rules</td><td>Three rules with exception clauses</td><td>Fills in the half of the strategy most people lack</td></tr>
+      <tr><td>Compare similar indices</td><td>A comparison table of 3 broad-based indices: fees / weighting / volatility</td><td>Turns "which one to buy" from a feeling into comparable dimensions</td></tr>
+      <tr><td><b>Observe without acting (recommended)</b></td><td>Record "moments I wanted to stop investing" and why, for 3 months</td><td>Observation replaces real losses — lowest cost, and it reveals your behavioral weak points early</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ============ Step 8 ============ -->
+<section id="s8">
+  <h2><span class="n">8</span>Quiz (2 of 10 shown)<span class="step-tag">full version has 10</span></h2>
+
+  <ol class="q">
+    <li>
+      <b>★ Regarding DCA vs a lump sum, the most accurate statement is:</b>
+      <div class="opt">A. DCA has a higher expected return　B. DCA lowers the probability of loss　C. The expectations are equal; the difference is the volatility path　D. DCA always beats a lump sum</div>
+      <div class="ans">
+        <b>Correct answer: C.</b><br>
+        Why A is wrong: equating "feels steadier" with "higher return". Linearity of expectation means installments do not change the mean.<br>
+        Why B is wrong: the probability of loss depends on the asset's final direction, not the entry method. Installments only spread entry points over time.<br>
+        Why D is wrong: treating one specific backtest window as a universal law — exactly the pseudo-proposition scored 42 in step 4.
+      </div>
+    </li>
+
+    <li>
+      <b>★★★ Someone stops deductions after two years of floating losses, then adds a lump sum when the index returns to cost. The most accurate assessment is:</b>
+      <div class="opt">A. Rational stop-loss　B. A typical behavioral bias that breaks the original strategy's structure　C. Lowering average cost, a good deal　D. Unrelated to DCA</div>
+      <div class="ans">
+        <b>Correct answer: B.</b><br>
+        Why A is wrong: stop-loss logic applies to deteriorating fundamentals of an individual stock, not to short-term fluctuations of a broad-based index. Two different kinds of decisions.<br>
+        Why C is wrong: looking only at unit price, not timing — missing that the pause skipped the lowest-cost stretch.<br>
+        Why D is wrong: this is precisely DCA's core failure point — the strategy did not fail; execution was interrupted. This is the phenomenon behind the first "industry blind spot" in step 2.
+      </div>
+    </li>
+  </ol>
+</section>
+
+<!-- ============ Step 9 ============ -->
+<section id="s9">
+  <h2><span class="n">9</span>Feynman explanation · 12-year-old version</h2>
+  <p class="lead">Told through a story about buying apples, without a single technical term.</p>
+
+  <p>Suppose you get 100 yuan of pocket money every week and want to buy apples. The price changes every week — sometimes 10 yuan per kg, sometimes 5.</p>
+
+  <p><b>Approach one</b>: save up 1,000 yuan and buy all at once on some day. If you are unlucky and that day happens to be 10 yuan per kg, you get only 100 kg.</p>
+
+  <p><b>Approach two</b>: buy 100 yuan's worth every week. At 10 yuan you get 10 kg; at 5 yuan you get 20 kg. After ten weeks you have spent 1,000 yuan but bought more than 100 kg — because you automatically bought more when it was cheap.</p>
+
+  <svg viewBox="0 0 680 200" width="100%" style="margin:18px 0" role="img" aria-label="Diagram comparing DCA with a lump sum">
+    <rect x="0" y="0" width="680" height="200" fill="#F7F8FA" rx="10"/>
+    <text x="24" y="30" font-size="13" fill="#12365F" font-weight="700">Same money, different buying methods</text>
+    <!-- Left: lump sum -->
+    <g>
+      <text x="40" y="58" font-size="12" fill="#A32020">Lump sum · bought at ¥10</text>
+      <rect x="40" y="70" width="240" height="86" fill="#FBECEC" stroke="#E4B8B8" rx="6"/>
+      <text x="160" y="105" font-size="22" fill="#A32020" text-anchor="middle" font-weight="700">1,000 ÷ 10</text>
+      <text x="160" y="132" font-size="16" fill="#7A2A2A" text-anchor="middle">= 100 kg</text>
+    </g>
+    <!-- Right: installments -->
+    <g>
+      <text x="380" y="58" font-size="12" fill="#15693B">¥100 weekly · price alternates 10 / 5</text>
+      <rect x="380" y="70" width="260" height="86" fill="#EBF6EF" stroke="#A9D3B7" rx="6"/>
+      <text x="510" y="105" font-size="20" fill="#15693B" text-anchor="middle" font-weight="700">10 kg when high, 20 kg when low</text>
+      <text x="510" y="132" font-size="16" fill="#155E35" text-anchor="middle">Same money, more kilograms</text>
+    </g>
+    <text x="24" y="182" font-size="11.5" fill="#6E7781">Note: the extra apples come from "buying more when cheap", not from "DCA earning more".</text>
+  </svg>
+
+  <div class="hl">
+    <b>But the story has a second half</b>: if the apple price rises all the way and never falls, then buying slowly every week actually loses compared with buying everything at the start — because you keep buying at higher prices. So the method works only if prices fluctuate and what you buy does not disappear.
+  </div>
+
+  <p><b>Retelling check</b>: if you can explain the following to someone else, you have passed this stage —</p>
+  <ol>
+    <li>Buying in installments and buying at once give roughly the same average price.</li>
+    <li>The advantage of installments is that you automatically buy a bit more when it is cheap.</li>
+    <li>But the thing must keep existing, and the price must rise and fall, for this to work.</li>
+    <li>If it only rises, installments actually buy at a higher average price.</li>
+    <li>The most likely failure is not the method but the person: unable to keep buying when it is cheap.</li>
+  </ol>
+  <p style="font-size:13.5px;color:#6E7781">If you cannot explain it, that is fine. Tell me which sentence you got stuck on and I will retell it with a different story — the interaction gate reserved in step 9 of this skill.</p>
+</section>
+
+<!-- ============ Step 10 ============ -->
+<section id="s10">
+  <h2><span class="n">10</span>Five-minute cheat sheet</h2>
+
+  <table>
+    <thead><tr><th style="width:22%">Section</th><th>Key points</th></tr></thead>
+    <tbody>
+      <tr><td>Core concepts</td><td>DCA changes the path, not the expectation; value comes from behavioral constraint and cost control, not return enhancement</td></tr>
+      <tr><td>Key variables</td><td>Asset survival, fees, volatility, deduction persistence, exit rules</td></tr>
+      <tr><td>Viewpoint → solution</td><td>"Buy more as it falls" → broad-based only, with a survival premise; "hold long term" → must come with exit clauses</td></tr>
+      <tr><td>Parameters</td><td>Deduction frequency matters little; fee differences matter a lot; window choice changes the direction of conclusions</td></tr>
+      <tr><td>Entry thresholds</td><td>The money is untouched for 24 months; you can tolerate interim floating losses without stopping</td></tr>
+      <tr><td>Risk red lines</td><td>No leverage, no single-sector bets, no rule changes on short-term news, no stopping during floating losses</td></tr>
+    </tbody>
+  </table>
+
+  <h3>One-sentence memory</h3>
+  <table>
+    <tbody>
+      <tr><td style="width:34%"><b>DCA governs the person, not the market</b></td><td>It solves "cannot hold on", not "bought the right thing"</td></tr>
+      <tr><td><b>Buying more when cheap is arithmetic, not magic</b></td><td>The extra units come from price differences, not strategy superiority</td></tr>
+      <tr><td><b>A plan without exit rules is not a plan</b></td><td>Buying completes only half</td></tr>
+      <tr><td><b>Change the window and the conclusion flips</b></td><td>Always ask about the window before trusting a backtest</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<footer>
+  <p>Generated by the <b>ten-step-learning</b> skill · sample excerpt · 2026-11-02</p>
+  <p>Disclaimer: this document is a learning-method demonstration, not investment advice. Specific decisions should follow official rules, fund contract terms and licensed professionals. Originally generated in Chinese and translated for this English edition.</p>
+</footer>
+
+</div>
+</body>
+</html>
