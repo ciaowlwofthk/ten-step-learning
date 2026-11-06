@@ -6,7 +6,7 @@
 
 Turns "teach me X systematically" from **ten unrelated checklists** into **one auditable chain of evidence**, delivered as a single-file HTML handbook you can read on a phone and print on paper.
 
-> An agent skill in plain `SKILL.md` format. Works with WorkBuddy, Claude Code and any runtime that follows the Agent Skills convention — no scripts, no external dependencies. Triggers: "ten-step learn X", "ten-step research X".
+> A **SKILL.md**-native agent skill — no scripts, no external dependencies. Works with WorkBuddy, Claude Code and any runtime that follows the Agent Skills convention. Triggers: "ten-step learn X", "ten-step research X".
 
 ---
 
