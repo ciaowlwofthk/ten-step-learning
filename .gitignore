@@ -1,12 +1,12 @@
-# 打包产物
+# Build artifacts
 *.zip
 
-# 备份与日志
+# Backups and logs
 _backup/
 *.log
 *.tmp
 
-# 系统文件
+# OS files
 .DS_Store
 Thumbs.db
 desktop.ini
